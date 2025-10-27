@@ -14,16 +14,7 @@ const Ex04 = () => {
     }
     
 
-    //  let ranNum = parseInt(Math.random()*50)+1
 
-  return (
-    <div>
-        <h1>1~50 까지의 랜덤 수 맞추기</h1>
-        <input ref={inputRef}></input>
-        <button onClick={btnClick}>출력</button>
-        <p>Hint : {inputText}</p>
-    </div>
-  )
 }
 
 export default Ex04
