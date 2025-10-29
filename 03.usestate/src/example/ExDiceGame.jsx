@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 let comScore2 = 0
 let useScore2 = 0
 
@@ -12,9 +12,7 @@ const ExDiceGame = () => {
     const [comScore, setComScore] = useState(0)
     const [userScore, setUserScore] = useState(0)
     const [result, setResult] = useState('')
-
     
-
     const c = () => {
         let num1 = parseInt(Math.random()*6)
         let num2 = parseInt(Math.random()*6)
@@ -36,6 +34,14 @@ const ExDiceGame = () => {
             setResult('you win')
         }
     }
+    
+    useEffect(() => {
+      if(comScore==10){
+        setResult('com win')}
+      else if(userScore==10){
+        setResult('user win')
+      }
+    }, [comScore, userScore])
 
   return (
     <div>
